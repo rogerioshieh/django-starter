@@ -19,6 +19,7 @@ services:
     restart: always
     volumes:
       - 'postgres:/var/lib/postgresql/data'
+      - 'shipyard-nfs:/mnt/nfs'
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=obscure-user
